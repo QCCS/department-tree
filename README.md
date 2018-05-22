@@ -1,4 +1,4 @@
-# yitu-question
+# department-tree
 
 原生js实现部门树
 
