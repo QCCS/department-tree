@@ -31,10 +31,6 @@ function DepartmentTree(options) {
             }
         }
     }
-    this.render = function () {
-        this._renderDom(id, this.treeData);
-        this._render(this.treeData, id);
-    }
     //渲染节点
     this._renderDom = function (id, group) {
         var li = document.createElement('li');
@@ -53,6 +49,12 @@ function DepartmentTree(options) {
         li.appendChild(ul);
         ul.id = group.id;
     }
+    //渲染入口
+    this.render = function () {
+        this._renderDom(id, this.treeData);
+        this._render(this.treeData, "0root");
+    }
+    //点击节点之后
     this.afterClick = function () {
         var pureUser = [];
         this.selectedDep.forEach(function (t) {
@@ -114,12 +116,11 @@ function DepartmentTree(options) {
     }
     this.setData = function (data) {
         this.treeData = data;
-        document.getElementById(id).innerHTML="";
+        document.getElementById(id).innerHTML = "";
         this._init();
     }
     //数据初始化
     this._init = function () {
-        this.treeData.id = "root";
         this._resetData([this.treeData], "root");
         this.render();
         console.log(this.treeData)
