@@ -87,30 +87,31 @@ function DepartmentTree(options) {
     this.setSelected = function (id, data) {
         if (this.isSingleSelected) {
             //单选
-            if (data.group && data.group.length > 0) {
-                for (var i in data.group) {
-                    if (data.group[i].id === id && !data.group[i].selected) {
-                        data.group[i].selected = true;
-                        this.selectedDep = [data.group[i]];
-                    } else {
-                        data.group[i].selected = false;
-                    }
-                    this.setSelected(id, data.group[i])
+            for (var key in data) {
+                if (data[key] === id && !data.selected) {
+                    data.selected = true;
+                    this.selectedDep = [data];
+                } else {
+                    data.selected = false;
                 }
             }
         } else {
             //多选
-            if (data.group && data.group.length > 0) {
-                for (var i in data.group) {
-                    if (data.group[i].id === id && !data.group[i].selected) {
-                        data.group[i].selected = true;
-                        this.selectedDep.push(data.group[i]);
-                    } else if (data.group[i].id === id && data.group[i].selected) {
-                        data.group[i].selected = false;
-                        this.deleteGroupById(data.group[i].id);
-                    }
-                    this.setSelected(id, data.group[i])
+            for (var key in data) {
+                if (data[key] === id && !data.selected) {
+                    data.selected = true;
+                    this.selectedDep.push(data);
+                    return false;
+                } else if (data[key] === id && data.selected) {
+                    data.selected = false;
+                    this.deleteGroupById(data.id);
+                    return false;
                 }
+            }
+        }
+        if (data.group && data.group.length > 0) {
+            for (var i = 0; i < data.group.length; i++) {
+                this.setSelected(id, data.group[i])
             }
         }
     }

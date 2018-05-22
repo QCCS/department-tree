@@ -3,6 +3,10 @@ body {
     margin: 0px;
 }
 
+ul {
+    margin: 0px;
+}
+
 li {
     margin: 0px;
     list-style: none;
@@ -16,7 +20,7 @@ li {
 .left {
     width: 380px;
     float: left;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     border-radius: 2px;
     padding: 10px;
 }
@@ -24,7 +28,7 @@ li {
 .right {
     width: 760px;
     float: right;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     border-radius: 2px;
     padding: 10px;
 }
@@ -33,28 +37,37 @@ li {
     clear: both;
 }
 
+/*-----depRoot----*/
 #depRoot .dep-item {
     cursor: pointer;
 }
 
 #depRoot .dep-item:hover {
-    background: darkgray;
+    background: #bfbfbf;
 }
 
 #depRoot .dep-item-active {
     background: darkgray;
 }
 
+#depRoot .dep-item-active:hover {
+    background: gray;
+}
+
+/*-----userTable----*/
 #userTable {
     padding-left: 10px;
 }
-#userTable .user-filter-inp{
+
+#userTable .user-filter-inp {
 
 }
-#userTable .user-item-wrap{
+
+#userTable .user-item-wrap {
     background: gainsboro;
     margin-top: 10px;
 }
+
 #userTable .userItem {
     cursor: pointer;
 }

@@ -5,7 +5,7 @@
 //数据
 //这个数据结构，我这边保持不动，就添加几个节点而已
 var rootGroup = {
-    name: "总部门",
+    name: "1",
     user: [
         {
             name: "Prometheus",
@@ -18,7 +18,7 @@ var rootGroup = {
     ],
     group: [
         {
-            name: "子部门1",
+            name: "1-1",
             user: [
                 {
                     name: "Dijkstra",
@@ -31,7 +31,7 @@ var rootGroup = {
             ],
             group: [
                 {
-                    name: "子部门2",
+                    name: "1-1-1",
                     user: [
                         {
                             name: "Dijkstra1",
@@ -44,14 +44,14 @@ var rootGroup = {
                     ]
                 },
                 {
-                    name: "子部门3",
+                    name: "1-1-2",
                     user: [],
                     group: []
                 }
             ]
         },
         {
-            name: "子部门4",
+            name: "1-2",
             user: [
                 {
                     name: "Dijkstra",
@@ -64,7 +64,7 @@ var rootGroup = {
             ],
             group: [
                 {
-                    name: "子部门5",
+                    name: "1-2-1",
                     user: [
                         {
                             name: "Dijkstra1",
@@ -77,11 +77,11 @@ var rootGroup = {
                     ]
                 },
                 {
-                    name: "子部门6",
+                    name: "1-2-2",
                     user: [],
                     group: [
                         {
-                            name: "子部门51",
+                            name: "1-2-2-1",
                             user: [
                                 {
                                     name: "Dijkstra1",
@@ -94,11 +94,11 @@ var rootGroup = {
                             ]
                         },
                         {
-                            name: "子部门61",
+                            name: "1-2-2-2",
                             user: [],
                             group: [
                                 {
-                                    name: "子部门511",
+                                    name: "1-2-2-2-1",
                                     user: [
                                         {
                                             name: "Dijkstra1",
@@ -111,7 +111,7 @@ var rootGroup = {
                                     ]
                                 },
                                 {
-                                    name: "子部门611",
+                                    name: "1-2-2-2-2",
                                     user: [],
                                     group: []
                                 }
