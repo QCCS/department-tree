@@ -247,8 +247,8 @@ window.onload = function () {
     var optionsTree = {
         data: rootGroup,
         wrapId: "depRoot",
-        //仅仅完成一个功能，回调的参数就给一个了
         afterClickHook: afterClickHook,
+        afterExpandHook: afterExpandHook,
         //是否单选
         isSingleSelected: false
         //是否显示checkbox
@@ -271,6 +271,8 @@ window.onload = function () {
         //部门树也可以重新设置数据，进行渲染
         // DepartmentTreeTest.setData(rootGroup1);
     }
-
+    function afterExpandHook(res) {
+        console.log(res)
+    }
 
 }

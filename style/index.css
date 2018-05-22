@@ -40,10 +40,35 @@ li {
 /*-----depRoot----*/
 #depRoot .dep-item {
     cursor: pointer;
+    width: 100%;
+    height: 26px;
 }
 
 #depRoot .dep-item:hover {
     background: #bfbfbf;
+}
+#depRoot .dep-item .expend-icon{
+    display: block;
+    float: left;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    background: #40a9ff;
+}
+#depRoot .dep-item .expend-icon:hover{
+    background: #40a9cc;
+}
+
+#depRoot .dep-item .dep-item-title{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    background: #eee;
+    min-width: 100px;
+    padding-left: 4px;
+}
+#depRoot .dep-item .dep-item-title:hover{
 }
 
 #depRoot .dep-item-active {
