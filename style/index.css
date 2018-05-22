@@ -1,0 +1,64 @@
+/*样式从简*/
+body {
+    margin: 0px;
+}
+
+li {
+    margin: 0px;
+    list-style: none;
+}
+
+.app {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.left {
+    width: 380px;
+    float: left;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.right {
+    width: 760px;
+    float: right;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+#depRoot .dep-item {
+    cursor: pointer;
+}
+
+#depRoot .dep-item:hover {
+    background: darkgray;
+}
+
+#depRoot .dep-item-active {
+    background: darkgray;
+}
+
+#userTable {
+    padding-left: 10px;
+}
+#userTable .user-filter-inp{
+
+}
+#userTable .user-item-wrap{
+    background: gainsboro;
+    margin-top: 10px;
+}
+#userTable .userItem {
+    cursor: pointer;
+}
+
+#userTable .userItem:hover {
+    background: darkgray;
+}
